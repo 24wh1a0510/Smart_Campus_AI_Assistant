@@ -1,4 +1,5 @@
-# 🎓 College FAQ Chatbot — RAG + Evaluation Suite
+# 🎓 Smart Campus AI Assistant
+# College FAQ Chatbot — RAG + Evaluation Suite
 
 A production-style Retrieval-Augmented Generation chatbot that answers college FAQs
 strictly from a DOCX knowledge base, with citations, refusal handling, prompt-injection
