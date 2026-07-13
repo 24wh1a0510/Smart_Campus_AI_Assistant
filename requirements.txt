@@ -1,0 +1,29 @@
+streamlit==1.38.0
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-openai==0.1.23
+langchain-text-splitters==0.2.4
+chromadb>=1.0.0,<2.0.0
+python-docx==1.1.2
+openai==1.44.0
+python-dotenv==1.0.1
+tiktoken==0.7.0
+pandas==2.2.2
+plotly==5.24.0
+ragas==0.1.16
+datasets==2.21.0
+pydantic==2.8.2
+tenacity==8.5.0
+PyYAML>=6.0.1
+
+# ── Optional: Vulnerability Scanning (Observability tab) ─────────────────────
+# The chatbot runs fine without these. Install only what you need.
+#
+# Giskard — hallucination, bias, robustness scanning
+#   pip install giskard
+#
+# DeepEval — automated RAG evaluation (hallucination, relevancy, precision)
+#   pip install deepeval
+#
+# Promptfoo — red-teaming & assertion-based prompt testing (needs Node.js)
+#   npm install -g promptfoo

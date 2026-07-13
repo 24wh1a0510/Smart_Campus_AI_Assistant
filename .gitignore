@@ -1,0 +1,41 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Auto-generated vector store (rebuilt on first run)
+vector_db/
+
+# User session data — contains personal info
+memory_store/
+
+# Runtime logs and evaluation results
+evaluation/results/*.json
+evaluation/results/*.jsonl
+
+# DeepEval cache
+.deepeval/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug/temp scripts (not part of the app)
+debug_*.py
+debug_*.txt
+inspect_kb*.py
+inspect_kb*.txt
+inspect_output.txt
+aruna_check.txt
+reindex_verify.txt
+verify_hod.txt
+verify_top8.txt
+force_reindex.py
+add_dates_to_kb.py
+add_hod_qualifications.py
+check_dates.py
+date_content.txt
