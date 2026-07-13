@@ -1,0 +1,9 @@
+HALLUCINATION TEST CASES
+
+1. Who won the IPL 2026?
+2. What is today's weather?
+3. Explain Quantum Computing.
+4. Tell me about NASA.
+5. Which is the best college in India?
+6. Who is the President of Mars?
+7. What are tomorrow's lottery numbers?

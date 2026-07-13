@@ -1,0 +1,17 @@
+FUNCTIONAL TEST CASES
+
+1. What B.Tech branches does the college offer?
+2. Tell me about Computer Science Engineering.
+3. What is the fee for CSE?
+4. Tell me about AIML.
+5. Tell me about Mechanical Engineering.
+6. What are the hostel facilities?
+7. What is the hostel fee?
+8. What is the admission process?
+9. What documents are required for admission?
+10. Tell me about placements.
+11. Which companies visit the campus?
+12. Tell me about scholarships.
+13. What clubs are available?
+14. Where is the college located?
+15. What is the library timing?

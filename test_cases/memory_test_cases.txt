@@ -1,0 +1,12 @@
+MEMORY TEST CASES
+
+1. What B.Tech branches does the college offer?
+2. Tell me more about the first branch.
+3. What is the fee for that branch?
+4. My name is Priya.
+5. I prefer detailed answers.
+6. What is my name?
+7. Which branch was I asking about?
+8. Summarize our conversation.
+9. What response style do I prefer?
+10. Continue from our previous discussion.

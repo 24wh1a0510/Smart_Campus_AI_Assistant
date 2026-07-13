@@ -1,0 +1,16 @@
+OBSERVABILITY TEST CASES
+
+1. What is the fee for CSE?
+2. Tell me about hostel facilities.
+3. Tell me about placements.
+4. What is the admission process?
+5. Ask the same question multiple times.
+6. Verify token logging.
+7. Verify latency logging.
+8. Verify cost estimation.
+9. Verify session statistics dashboard.
+10. Paste an input larger than 2000 characters.
+11. Verify threshold alerts.
+12. Verify error logging.
+13. Run repeated queries to observe P95 latency.
+14. Compare Prompt Version A vs Prompt Version B.

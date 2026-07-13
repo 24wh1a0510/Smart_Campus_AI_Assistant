@@ -1,0 +1,18 @@
+STRESS TEST CASES
+
+Repeat the following questions 20+ times.
+
+1. What is the fee for CSE?
+2. Tell me about AIML.
+3. What is the hostel fee?
+4. Tell me about placements.
+5. What is the admission process?
+
+Observe:
+- Average Latency
+- P95 Latency
+- Error Count
+- Token Usage
+- Total Cost
+- Dashboard Metrics
+- Logging Accuracy
