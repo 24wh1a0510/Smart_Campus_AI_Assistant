@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College FAQ Assistant — Login</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f3460 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 48px 40px 40px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .logo-icon {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .logo h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      letter-spacing: -0.02em;
+    }
+
+    .logo p {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(99,102,241,0.15);
+      color: #818cf8;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(99,102,241,0.25);
+      margin-bottom: 10px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin: 24px 0;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .field {
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 11px 14px;
+      background: #0f172a;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #f1f5f9;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+    }
+
+    input::placeholder { color: #475569; }
+
+    .toggle-pw {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #475569;
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .toggle-pw:hover { color: #94a3b8; }
+
+    .btn-login {
+      width: 100%;
+      padding: 12px;
+      background: #6366f1;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      margin-top: 4px;
+    }
+
+    .btn-login:hover  { background: #4f46e5; }
+    .btn-login:active { transform: scale(0.98); }
+
+    .error-msg {
+      display: none;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.3);
+      color: #fca5a5;
+      font-size: 0.85rem;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .success-msg {
+      display: none;
+      background: rgba(34,197,94,0.1);
+      border: 1px solid rgba(34,197,94,0.3);
+      color: #86efac;
+      font-size: 0.85rem;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .footer-note {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #334155;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="logo">
+    <span class="logo-icon">🎓</span>
+    <span class="tag">RAG-powered · Grounded answers</span>
+    <h1>College FAQ Assistant</h1>
+    <p>Sign in to continue</p>
+  </div>
+
+  <hr class="divider" />
+
+  <form id="loginForm" novalidate>
+    <div class="field">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        autocomplete="username"
+        required
+      />
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        autocomplete="current-password"
+        required
+      />
+      <button type="button" class="toggle-pw" id="togglePw" aria-label="Toggle password visibility">👁</button>
+    </div>
+
+    <button type="submit" class="btn-login" id="loginBtn">Sign In</button>
+
+    <div class="error-msg"  id="errorMsg"></div>
+    <div class="success-msg" id="successMsg"></div>
+  </form>
+
+  <p class="footer-note">BVRIT College · Admissions &amp; FAQ Portal</p>
+</div>
+
+<script>
+  // Demo credentials
+  const VALID_USERS = {
+    admin:   'admin123',
+    student: 'student@2026',
+    demo:    'demo',
+  };
+
+  const form       = document.getElementById('loginForm');
+  const usernameEl = document.getElementById('username');
+  const passwordEl = document.getElementById('password');
+  const togglePw   = document.getElementById('togglePw');
+  const errorMsg   = document.getElementById('errorMsg');
+  const successMsg = document.getElementById('successMsg');
+  const loginBtn   = document.getElementById('loginBtn');
+
+  // Toggle password visibility
+  togglePw.addEventListener('click', () => {
+    const isHidden = passwordEl.type === 'password';
+    passwordEl.type = isHidden ? 'text' : 'password';
+    togglePw.textContent = isHidden ? '🙈' : '👁';
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    errorMsg.style.display   = 'none';
+    successMsg.style.display = 'none';
+
+    const user = usernameEl.value.trim();
+    const pass = passwordEl.value;
+
+    if (!user || !pass) {
+      errorMsg.textContent = 'Please enter both username and password.';
+      errorMsg.style.display = 'block';
+      return;
+    }
+
+    if (VALID_USERS[user] && VALID_USERS[user] === pass) {
+      successMsg.textContent = `✅ Welcome, ${user}! Redirecting to chatbot...`;
+      successMsg.style.display = 'block';
+      loginBtn.disabled = true;
+      loginBtn.textContent = 'Signing in...';
+      // Simulate redirect delay
+      setTimeout(() => {
+        successMsg.textContent = `✅ Login successful! (chatbot would load here)`;
+      }, 1500);
+    } else {
+      errorMsg.textContent = '❌ Invalid username or password. Please try again.';
+      errorMsg.style.display = 'block';
+      passwordEl.value = '';
+      passwordEl.focus();
+    }
+  });
+</script>
+
+</body>
+</html>
